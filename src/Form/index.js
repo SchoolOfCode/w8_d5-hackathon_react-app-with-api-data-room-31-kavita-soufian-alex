@@ -1,23 +1,32 @@
 import { React, useState } from "react";
-import './Form.css';
-function Form({getQuery}) {
-    const [input, setInput] = useState("")
+import "./Form.css";
+import { MdMovie } from "react-icons/md";
 
-    function handleSubmit(e) {
-        e.preventDefault();
-        getQuery(input)
-    };
+function Form({ getQuery }) {
+  const [input, setInput] = useState("");
 
-    function handleChange(e) {
-        setInput(e.target.value)}
-    
+  function handleSubmit(e) {
+    e.preventDefault();
+    getQuery(input);
+  }
+
+  function handleChange(e) {
+    setInput(e.target.value);
+  }
 
   return (
-    <form onSubmit={e => handleSubmit(e)}>
-      <input type="text" onChange={e => handleChange(e)} required></input>
-      <button type="submit">Find the movie!</button>
+    <form onSubmit={(e) => handleSubmit(e)}>
+      <input
+        type="text"
+        onChange={(e) => handleChange(e)}
+        required
+        placeholder="Search for a movie"
+      ></input>
+      <button type="submit">
+        <MdMovie />
+      </button>
     </form>
   );
 }
- 
-export default Form 
+
+export default Form;

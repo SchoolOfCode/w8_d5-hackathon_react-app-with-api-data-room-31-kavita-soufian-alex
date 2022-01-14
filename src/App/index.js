@@ -1,21 +1,22 @@
-import {useState} from 'react'
-import './App.css';
-import Form from '../Form';
-import Data from '../Data';
-
+import { useState } from "react";
+import "./App.css";
+import Form from "../Form";
+import Data from "../Data";
+import Header from "../Header";
 function App() {
-  const [query, setQuery] = useState("")
+  const [query, setQuery] = useState("");
 
-  function getQuery(query){
-    setQuery(query)
+  function getQuery(query) {
+    setQuery(query);
   }
-
 
   return (
     <>
-  <Form getQuery={getQuery}/>
-  <Data query={query}/>
-  </>);
+      <Header />
+      <Form getQuery={getQuery} />
+      <Data query={query} />
+    </>
+  );
 }
 
 export default App;

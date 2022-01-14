@@ -3,9 +3,21 @@ form{
     display:flex;
     margin: auto 0;
     justify-content: center;
+    align-items: center;
 }
 
 input, button {
+    font-size: 24px;
     padding: 5px;
-    margin:5px;
+    /* margin:5px; */
+}
+
+button {
+    margin-left: 10px;
+    border: none;
+    background-color: transparent;
+}
+
+button:hover, input:hover{
+    cursor: pointer;
 }
