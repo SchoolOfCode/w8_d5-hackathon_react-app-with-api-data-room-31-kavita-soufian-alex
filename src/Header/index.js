@@ -2,10 +2,10 @@ import "./style.css";
 
 const Header = () => {
   return (
-    <header class="intro">
+    <header className="intro">
       <div className="container">
-        <h1 class="intro__title">The KSA Movie Database</h1>
-        <p class="intro__text">
+        <h1 className="intro__title">The KSA Movie Database</h1>
+        <p className="intro__text">
           The <em>only</em> Movie Database you need.
         </p>
       </div>

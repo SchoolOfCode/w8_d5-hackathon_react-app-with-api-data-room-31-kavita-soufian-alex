@@ -25,3 +25,18 @@ Focus on what features you are going to build next. Break it down into tasks/tic
 ## Show & Tell @ 16:00
 
 You'll be presenting your apps to each other, and each team member should be prepared to present about their app so an end of day wrap-up is a good idea.
+
+
+Plan:
+
+components: form - input (text) and submit button 
+            header -
+            Data - title, ratings, short description 
+
+after lunch:
+
+2. bring back specific movie data
+3. have data appear on hover 
+
+
+click on div, get back data from api regarding that movie 

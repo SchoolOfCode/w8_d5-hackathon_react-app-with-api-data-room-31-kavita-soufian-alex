@@ -16,6 +16,7 @@ button {
     margin-left: 10px;
     border: none;
     background-color: transparent;
+    color: #2dc653;
 }
 
 button:hover, input:hover{
