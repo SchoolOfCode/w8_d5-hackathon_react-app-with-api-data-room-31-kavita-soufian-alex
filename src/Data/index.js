@@ -11,7 +11,7 @@ function Data({ query }) {
     async function getData() {
       try {
         const response = await fetch(
-          `http://www.omdbapi.com/?s=${query}&apikey=776e707`
+          `https://www.omdbapi.com/?s=${query}&apikey=776e707`
         );
         const fetchData = await response.json();
         setData(fetchData.Search);
