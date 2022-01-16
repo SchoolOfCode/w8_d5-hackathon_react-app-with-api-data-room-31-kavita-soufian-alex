@@ -3,9 +3,8 @@ import MovieComponent from "../movieComponent";
 import { nanoid } from "nanoid";
 import "./Data.css";
 
-function Data({ query }) {
+function Data({ query, movieData }) {
   const [data, setData] = useState(false);
-  const [movieData, setMovieData] = useState(false);
 
 
   useEffect(() => {
@@ -23,21 +22,9 @@ function Data({ query }) {
   }, [query]);
 
   
-    async function getMovieInfo(id) {
-      console.log(id)
-      try {
-        const response = await fetch(
-          `https://www.omdbapi.com/?i=${id}&apikey=776e707`
-        );
-        const fetchMovieData = await response.json();
-        console.log(fetchMovieData);
-        setMovieData(fetchMovieData);
-      } catch (error) {}
-    }
- 
 
-
-  return data ? (
+  if (data &&  movieData==="MultipleMovies")
+  return (
     <div className="movieList">
       {data.map(({ Title, Poster, Year, imdbID }) => {
         return (
@@ -48,14 +35,13 @@ function Data({ query }) {
             Year={Year}
             imdbID={imdbID}
             key={nanoid()}
-            getMovieInfo={getMovieInfo}
+            // getMovieInfo={getMovieInfo}
           />
-          
         );
       })}
-    </div>
-  ) : (
-    <></>
-  );
+    </div>)
+  else {
+    return (<></>)
+  }
 }
 export default Data;
