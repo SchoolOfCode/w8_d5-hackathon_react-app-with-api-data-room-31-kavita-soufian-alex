@@ -1,0 +1,79 @@
+.containerData {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  row-gap: 5px;
+  column-gap: 30px;
+
+  grid-template-areas:
+    "title title"
+    "subtitle  genres "
+    "plot img"
+    "director img"
+    "stars img"
+    "writer img"
+    "ratings img";
+  max-width: 1000px;
+  margin: auto;
+}
+
+.title {
+  grid-area: title;
+
+}
+
+.subtitle {
+  grid-area: subtitle;
+  display: flex;
+  gap: 15px;
+  font-weight: bold;
+}
+
+.genres {
+  grid-area: genres;
+  text-align: end;
+  align-self: center;
+}
+
+img {
+  grid-area: img;
+  justify-self: flex-end;
+}
+
+.director {
+  grid-area: director;
+}
+
+.plot {
+  grid-area: plot;
+  text-align: justify;
+}
+
+.stars {
+  grid-area: stars;
+  text-align: justify;
+}
+
+.writer {
+  grid-area: writer;
+}
+
+.ratings {
+  grid-area: ratings;
+}
+
+.ratingsData {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-evenly;
+}
+.ratingsData > p {
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  line-height: 1.5;
+}
+
+h4 {
+  margin: 0.2rem 0;
+}
